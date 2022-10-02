@@ -1,4 +1,4 @@
-#,Country,Daily Oil Consumption (Barrels),World Share,Yearly Gallons Per Capita,Price Per Gallon (USD),Price Per Liter (USD),Price Per Liter (PKR)
+#,Country,Daily_Oil_Consumption(Barrels),World_Share,Yearly_Gallons_Per_Capita,Price_Per_Gallon(USD),Price_Per_Liter(USD),Price_Per_Liter(PKR)
 1,United States,19687287,20.30%,934.3,5.19,1.37,289.97
 2,China,12791553,13.20%,138.7,5.42,1.43,302.87
 3,India,4443000,4.60%,51.4,5.05,1.33,281.93
@@ -100,7 +100,7 @@
 99,El Salvador,52000,0.05%,125.4,4.31,1.14,240.90
 100,Slovenia,52298,0.05%,386.5,6.15,1.62,343.48
 101,Cyprus,52000,0.05%,681.2,7.04,1.86,393.18
-102,Côte d'Ivoire,51000,0.05%,32.8,4.47,1.18,249.57
+102,CÃ´te d'Ivoire,51000,0.05%,32.8,4.47,1.18,249.57
 103,Paraguay,51000,0.05%,115.4,5.30,1.40,295.89
 104,Uzbekistan,49000,0.05%,23.9,3.39,0.90,189.29
 105,Senegal,49000,0.05%,50.1,5.39,1.42,300.96
