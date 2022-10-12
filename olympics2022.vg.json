@@ -128,7 +128,6 @@
           },
           "tooltip": [
              {"field": "Country", "type": "nominal"},
-            {"field": "Confirmed", "type": "quantitative", "format": ","},
             {"field": "MenAthletes", "type": "quantitative", "format": ","},
             {"field": "WomenAthletes", "type": "quantitative", "format": ","},
             {"field": "Gold", "type": "quantitative", "format": ","},
