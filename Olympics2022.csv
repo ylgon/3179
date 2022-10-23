@@ -1,4 +1,4 @@
-NOC,Continent,MenAthletes,WomenAthletes,TotalAthletes,Gold,Silver,Bronze
+Country,Continent,MenAthletes,WomenAthletes,TotalAthletes,Gold,Silver,Bronze
 Norway,Europe,53,31,84,16,8,13
 Germany,Europe,96,49,145,12,10,5
 People's Republic of China,Asia,94,86,180,9,4,2
