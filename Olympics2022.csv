@@ -1,4 +1,4 @@
-RANK;NOC CODE;NOC;Continent;Men Athletes;Women Athletes;Total Athletes;Gold;Silver;Bronze;Total Medals;Rank By Total;Alpine Skiing;Biathlon;Bobsleigh;Cross Country Skiing;Curling;Figure Skating;Freestyle Skiing;Ice Hockey;Luge;Nordic Combined;Short Trank Speed Skating;Skeleton;Sky Jumping;Snowboard;Speed Skating
+RANK;NOCCODE;NOC;Continent;MenAthletes;WomenAthletes;TotalAthletes;Gold;Silver;Bronze;TotalMedals;RankByTotal;AlpineSkiing;Biathlon;Bobsleigh;CrossCountrySkiing;Curling;FigureSkating;FreestyleSkiing;IceHockey;Luge;NordicCombined;ShortTrankSpeedSkating;Skeleton;SkyJumping;Snowboard;SpeedSkating
 1;NOR;Norway;Europe;53;31;84;16;8;13;37;1;4;14;;8;1;;1;;;4;;;1;1;3
 2;GER;Germany;Europe;96;49;145;12;10;5;27;3;1;2;7;2;;;1;;6;2;;3;3;;
 3;CHN;People's Republic of China;Asia;94;86;180;9;4;2;15;11;;;;;;1;6;;;;4;1;;2;1
