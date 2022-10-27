@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Total Discipline of Summer Olympics 2020",
+   
+    "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/athletes.csv"
+    },
+    "hconcat":[{
+    "mark": {"type": "bar", "tooltip": true},
+    "width": 430,
+    "encoding": {
+      "x": {"field": "discipline", "type": "nominal", "axis": {"labelAngle": 0},
+      "scale": {
+        "domain":["Athletics","Swimming","Football","Rowing","Hockey"]
+      }
+    },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"}
+        
+        
+    }
+    
+  },
+
+  {
+    "title": "Total Discipline of Winter Olympics 2022",
+    "width": 430,
+    "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/winterathlete.csv"
+    },
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {"field": "discipline", "type": "nominal", "axis": {"labelAngle": 0},
+      "scale": {
+        "domain":["Ice Hocky","Alpine Skiing","Cross-Country Skiing","Freestyle Skiing","Snowboard"]
+      }
+    },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"}
+        
+        
+    }
+  }
+    ]
+  }
