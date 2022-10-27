@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": 5,
+  "width": 400,
+  "height": 300,
+  "title": "summer olympics medal from 1924 to 2018",
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2008,
+      "bind": {
+        "input": "range",
+        "min": 1896,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+
+     
+  ],
+  "projection": {
+    "type": "equirectangular"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/ne_110m.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/Summer_olympic_Medals.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Country_Name",
+          "from": {
+            "data": {
+             "url": "https://raw.githubusercontent.com/ylgon/3179/main/ne_110m.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "key": "properties.NAME"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.Year == Year_selection"}
+      ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "total",
+          "type": "quantitative",
+          "scale": {"scheme": "reds", "domain": [0, 30]},
+          "title": "total metal",
+          "legend": {"orient": "right"}
+        },
+        "tooltip": [
+          {"field": "Country_Name", "type": "nominal", "title": "State"},
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "total metal"
+          },
+          {"field": "Year", "type": "quantitative"},
+          {"field": "Gold", "type": "quantitative"},
+          {"field": "Silver", "type": "quantitative"},
+          {"field": "Bronze", "type": "quantitative"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
