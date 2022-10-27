@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": "Total Discipline of Summer Olympics From 1896 to 2021",
+    "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/summer.csv"
+    },
+    "hconcat":[{
+    "mark": {"type": "bar", "tooltip": true},
+    "width": 430,
+    "encoding": {
+      "x": {"field": "Discipline", "type": "nominal", "axis": {"labelAngle": 0},
+      "scale": {
+        "domain":["Athletics","Swimming","Boxing","Shooting","Rowing"]
+      }
+    },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"}
+        
+        
+    }
+    
+  },
+
+
+  {
+   
+    "title": "Total Discipline of Winter Olympics From 1824 to 2021",
+    "data": {
+        "url": "https://raw.githubusercontent.com/ylgon/3179/main/winter.csv"
+    },
+    "width": 430,
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {"field": "Discipline", "type": "nominal", "axis": {"labelAngle": 0},
+      "scale": {
+        "domain":["Cross-Country Skiing","Speed skating","Alpine Skiing","Figure skating","Biathlon"]
+      }
+    },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"}
+        
+        
+    }
+}
+    ] 
+  }
