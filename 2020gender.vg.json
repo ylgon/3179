@@ -1,0 +1,74 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    
+    "data": {"url": "https://raw.githubusercontent.com/ylgon/3179/main/athletes.csv"},
+    
+    "title": "Total gender of Summer Olympics 2020",
+    "hconcat":[
+
+    {
+      "width":410,
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {
+        "field": "country_code",
+        "type": "nominal",
+        "scale": {
+            "domain": ["AUS","CAN","CHN","FRA","GBR","GER","ITA","JPN","USA"]
+          },
+        "title": "Country"
+      },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "gender",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Male", "Female"],
+          "range": ["#1f77b4", "#9467bd"]
+        },
+        "title": "gender"
+        
+      }
+    }
+  },
+
+  {
+  "data": {"url": "https://raw.githubusercontent.com/ylgon/3179/main/winterathlete.csv"},
+  "title": "Total gender of Winter Olympics 2022",
+  "width":410,
+  "mark": {"type": "bar", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "country_code",
+      "type": "nominal",
+      "scale": {
+          "domain": ["AUS","CAN","CHN","FRA","GBR","GER","ITA","JPN","USA"]
+        },
+      "title": "Country"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "gender",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Male", "Female"],
+        "range": ["#1f77b4", "#9467bd"]
+      },
+      "title": "gender"
+      
+    }
+    }
+  }
+]
+}
+  
+
+  
