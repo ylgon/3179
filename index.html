@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>OLYMPICS</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+          <div class="pure-u-1-1">
+            <h1>OLYMPICS</h1>
+          </div>
+        </div> 
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>Metal Rate and Total Metal Of Country That Partipate In Summer And Winter Olympics</h2>
+                <div class="description description-whole">
+                    <p>The graphs at the left top shows the summer olympics total medal for each county <span class='color_text'>from year 1896 until 2020</span>.
+                      The graphs at the left bottom shows the winter olympics total medal for each county <span class='color_text'>from year 1924 until 2021</span>.
+                      The graphs at the right top shows medal rate<span class='color_text'>(total medal in summer/total Partipation in summer)</span> from year 1896 until 2020.
+                      The graphs at the right bottom shows medal rate<span class='color_text'>(total medal in summer/total Partipation in summer)</span> from year 1924 until 2021.
+                      From the graph, we can see <span class='color_text'>if the country medal rate is high</span>, their total medal of that country is also high in most of the years.
+                      
+                    </p>
+                </div>
+            </div>
+          
+          <div class="pure-u-11-24">
+              <div id="summertotalmetal" class="vis-container"></div>
+          </div>
+
+          <div class="pure-u-12-24">
+              <div id="summermedalrate" class="vis-container"></div>
+          </div>
+          <div class="pure-u-11-24">
+            <div id="wintertotalmedal" class="vis-container"></div>
+        </div>
+
+        <div class="pure-u-12-24">
+            <div id="wintermedalrate" class="vis-container"></div>
+        </div>
+       
+
+        
+    
+        <div class="pure-g">
+          <div class="pure-u-1-1">
+              <h2>Total Discipline Of Olympics Before 2020 and 2021 vs 2020 Summer Discipline vs 2022 Winter Discipline</h2>
+              <div class="description description-whole">
+                  <p>
+                    the graph above shows the <span class='color_text'>top 5 discipline</span> that have <span class='color_text'>the highest amount of athlete</span>
+                     partipate since year 1896 of summer olmpics and 1924 of winter olympics until 2020.
+                     the graph below shows the <span class='color_text'>top 5 discipline</span> that have <span class='color_text'>the highest amount of athlete</span>
+                     partipate of recent year 2020 of summer olmpics and 2022 of winter olympics.
+                     From the graoh, we can see the summer top 2 is not different but top 3,4,5 change from <span class='color_text'>boxhing, shooting,rowing to football and rowing and hockey</span>.
+                     From the graoh, we can see the winter <span class='color_text'>cross-country skiing</span> decrease from top 1  to top 3 and <span class='color_text'>alpine skiing</span> increase from top 3 to top 2.
+                     
+
+                  </p>
+              </div>
+          </div>
+         
+          <div id="totalDiscipline" class="vis-container2"></div>
+          <div id="discipline" class="vis-container2"></div>
+            
+          <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>Total Gender Of Athlete Before 2020 And 2021 vs 2020 Summer Gender vs 2022 Winter Gender</h2>
+                <div class="description description-whole">
+                    <p> The graph at the top show <span class='color_text'>the total athlete gender</span> from 1896 of summer olympics until 2020 and 1924 of winter olympics until 2021.
+                      The graph at the top bottom <span class='color_text'>the total athlete gender </span>of recent year 2020 of summer olmpics and 2022 of winter olympics.
+                      From the graph, we can see at the past most country have<span class='color_text'> male athlete more than female athlete</span> which mean they are more male discipline.
+                    But in rencet years, shows most country have nearly <span class='color_text'>equal amount of male athlete and female athlete</span>.
+                    </p>
+                </div>
+            </div>
+           
+            <div id="summergender" class="vis-container2"></div>
+            <div id="gender" class="vis-container2"></div>
+              
+         
+            <div class="pure-g">
+              <div class="pure-u-1-1">
+                  <h2>Total Metal Of Gold, Sliver, Bronze Before 2021 From First Olympics And Winter Olympics    2022   </h2>
+                  <div id="summermedal" class="vis-container2"></div>
+                  <div id="olympics2022" class="vis-container2"></div>
+                  <div class="description description-whole">
+                      <p>
+                        The graph at the top show <span class='color_text'>the total medal of gold,sliver and bronze</span> from 1896 of summer olympics and 1924 of winter olympics.
+                        We can see there are nearly <span class='color_text'>equal amount of medal</span> in most country.
+                        the graph bottom shows the missing medal of 2022 winter olympics from the above analysis. we can see most country have nearly <span class='color_text'>equal men 
+                        and women athlete</span>. if their <span class='color_text'>medal rate is high</span>, the <span class='color_text'>country total medal</span> is also high in 2022.We can also see most of the <span class='color_text'>country partipate in winter olympics</span>
+                        are in <span class='color_text'>Europe.</span>
+                      </p>
+                  </div>
+              </div>
+             
+              
+                
+              <div class="pure-g">
+                <div class="pure-u-1-1">
+                  <p>This visualisation is created by Yuling Gong</p>
+                </div>
+              </div>
+          
+    </div> 
+    <script type="text/javascript">
+      var Vis1 = "summertotalmetal.vg.json";
+      var Vis2 = "summermedalrate.vg.json";
+      var Vis3 = "wintermedalrate.vg.json";
+      var Vis4 = "wintertotalmedal.vg.json";
+      var Vis5 = "totalDiscipline.vg.json";
+      var Vis6 = "2020discipline.vg.json";
+      var Vis7 = "2020gender.vg.json";
+      var Vis8 = "olympics2022.vg.json";
+      var Vis9 = "summergender.vg.json";
+      var Vis10 = "summermedal.vg.json";
+
+
+
+
+      vegaEmbed('#summertotalmetal', Vis1, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#summermedalrate', Vis2, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#wintermedalrate', Vis3, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#wintertotalmedal', Vis4, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#totalDiscipline', Vis5, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#discipline', Vis6, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#gender', Vis7, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#olympics2022', Vis8, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#summergender', Vis9, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#summermedal', Vis10, { "actions": false }).then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+  </script>
+</body>
+
+</html>
