@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/ylgon/3179/main/summer.csv"},
+    "title": "summer olympics medal of glod, sliver and bronze from 1896 to 2020",
+    "hconcat":[
+     
+      {
+    "width":400,
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "scale": {
+            "domain":["AUS","CAN","CHN","FRA","GBR","GER","ITA","JPN","RUS","USA"]
+          },
+        "title": "Country"
+      },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "Medal",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Gold", "Bronze","Silver"],
+          "range": ["#1f77b4", "#9467bd","#aec7e8"]
+        },
+        "title": "Medal"
+      } 
+    }
+  },
+{
+  "data": {"url": "https://raw.githubusercontent.com/ylgon/3179/main/winter.csv"},
+  "title": "winter olympics medal of glod, sliver and bronze from 1924 to 2018",
+  "mark": {"type": "bar", "tooltip": true},
+  "width":410,
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {
+          "domain":["AUS","CAN","CHN","FRA","GBR","GER","ITA","JPN","RUS","USA"]
+        },
+      "title": "Country"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Medal",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Gold", "Bronze","Silver"],
+        "range": ["#1f77b4", "#9467bd","#aec7e8"]
+      },
+      "title": "Medal"
+       } 
+      }
+    }
+  ]
+}
+    
+  
+    
+
+  
